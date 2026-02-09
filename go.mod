@@ -1,4 +1,4 @@
-module github.com/Grokir/HyprWallsChanger-go/image_handler
+module github.com/Grokir/HyprWallsChanger-go
 
 go 1.25.6
 
