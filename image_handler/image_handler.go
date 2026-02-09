@@ -1,4 +1,4 @@
-package imagehandle
+package image_handler
 
 import (
 	"image"
@@ -6,7 +6,6 @@ import (
 	"github.com/anthonynsimon/bild/blur"
 	"github.com/anthonynsimon/bild/imgio"
 )
-
 
 func save_png(filename string, blurred *image.RGBA) bool {
 	if err := imgio.Save(filename, blurred, imgio.PNGEncoder()); err != nil {
