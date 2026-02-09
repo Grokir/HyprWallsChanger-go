@@ -7,7 +7,7 @@ import (
 	"slices"
 
 	"github.com/anthonynsimon/bild/imgio"
-	"github.com/Grokir/HyprWallsChanger-go"
+	"github.com/Grokir/HyprWallsChanger-go/image_handler"
 )
 
 
