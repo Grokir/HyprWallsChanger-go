@@ -27,13 +27,13 @@ func main() {
 	}
 
 	fmt.Println("[*] Start blurring...")
-	blurred_img := image_handler.gaussian_blur(img, blur_radius)
+	blurred_img := image_handler.GaussianBlur(img, blur_radius)
 
 	fmt.Println("[*] Start save image...")
 	if slices.Contains([]string{"jpg", "jpeg"}, format) {
-		save_flag = image_handler.save_jpeg(filename, blurred_img)
+		save_flag = image_handler.SaveJPEG(filename, blurred_img)
 	} else if format == "png" {
-		save_flag = image_handler.save_png(filename, blurred_img)
+		save_flag = image_handler.SavePNG(filename, blurred_img)
 	} else {
 		log.Fatalf("[!] Unsupported format \"%s\"", format)
 	}
