@@ -5,11 +5,9 @@ import (
 	"log"
 	"os"
 	"slices"
-
-	"github.com/anthonynsimon/bild/imgio"
 	"HyprWallsChanger-go/image_handler"
+	"github.com/anthonynsimon/bild/imgio"
 )
-
 
 func main() {
 	if len(os.Args) != 2 {
@@ -18,7 +16,7 @@ func main() {
 
 	var filename string = os.Args[1]
 	var format string = filename[len(filename)-3:]
-	var blur_radius float64 = 400.0
+	var blur_radius float64 = 100.0
 	var save_flag bool = false
 
 	img, err := imgio.Open(filename)
