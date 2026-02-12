@@ -2,6 +2,7 @@ package image_handler
 
 import (
 	"image"
+	"os"
 
 	"github.com/anthonynsimon/bild/blur"
 	"github.com/anthonynsimon/bild/imgio"
@@ -23,4 +24,12 @@ func SaveJPEG(filename string, blurred *image.RGBA) bool {
 
 func GaussianBlur(image image.Image, blur_radius float64) *image.RGBA {
 	return blur.Gaussian(image, blur_radius)
+}
+
+func ImageIsExists(filename string) bool {
+	if _, err := os.Stat(filename); err == nil {
+		return true
+	}
+
+	return false
 }
